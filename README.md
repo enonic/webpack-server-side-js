@@ -45,6 +45,10 @@ Into:
 
 ## Changelog
 
+### 0.2.0
+
+* Removed transform-es2017-object-entries because it's for babel 6, not 7
+
 ### 0.1.2
 
 * Add @babel/plugin-transform-classes

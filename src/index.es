@@ -1,7 +1,6 @@
 /* eslint-disable import/prefer-default-export */
 import glob from 'glob';
 import path from 'path';
-import UglifyJsPlugin from 'uglifyjs-webpack-plugin'; // Supports ECMAScript2015
 
 const dict = arr => Object.assign(...arr.map(([k, v]) => ({ [k]: v })));
 // const toStr = v => JSON.stringify(v, null, 4);
@@ -36,6 +35,8 @@ export function webpackServerSideJs(params) {
     devtool = false,
 
     mode = 'production',
+
+    optimization = {},
 
     outputFilename = '[name].js',
     outputPath = path.join(__dirname, DST_DIR),
@@ -124,8 +125,7 @@ export function webpackServerSideJs(params) {
                   '@babel/plugin-transform-classes',
                   '@babel/plugin-transform-modules-commonjs',
                   '@babel/plugin-transform-object-assign',
-                  'array-includes',
-                  'transform-es2017-object-entries'
+                  'array-includes'
                 ],
                 presets: [
                   '@babel/preset-typescript',
@@ -145,14 +145,7 @@ export function webpackServerSideJs(params) {
         }
       ]
     }, // module
-    optimization: {
-      minimizer: [
-        new UglifyJsPlugin({
-          parallel: true,
-          sourceMap: false
-        })
-      ]
-    },
+    optimization,
     output: {
       path: outputPath,
       filename: outputFilename,

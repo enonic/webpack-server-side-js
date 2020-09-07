@@ -2,36 +2,35 @@
   "author": "Christian Westgaard <cwe@enonic.com>",
   "contributors": [],
   "dependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/plugin-proposal-class-properties": "^7.7.4",
-    "@babel/plugin-proposal-export-default-from": "^7.7.4",
-    "@babel/plugin-proposal-object-rest-spread": "^7.7.4",
-    "@babel/plugin-syntax-throw-expressions": "^7.7.4",
-    "@babel/plugin-transform-classes": "^7.7.4",
-    "@babel/plugin-transform-modules-commonjs": "^7.7.5",
-    "@babel/plugin-transform-object-assign": "^7.7.4",
-    "@babel/plugin-transform-runtime": "^7.7.6",
-    "@babel/preset-env": "^7.7.6",
-    "@babel/preset-typescript": "^7.7.4",
-    "@babel/register": "^7.7.4",
-    "@babel/runtime": "^7.7.6",
-    "babel-loader": "^8.0.6",
-    "babel-plugin-array-includes": "^2.0.3",
-    "babel-plugin-transform-es2017-object-entries": "0.0.5",
-    "glob": "^7.1.6",
-    "path": "^0.12.7",
-    "webpack": "^4.41.2",
-    "webpack-cli": "^3.3.10"
+    "@babel/core": "7.11.6",
+    "@babel/plugin-proposal-class-properties": "7.10.4",
+    "@babel/plugin-proposal-export-default-from": "7.10.4",
+    "@babel/plugin-proposal-object-rest-spread": "7.11.0",
+    "@babel/plugin-syntax-throw-expressions": "7.10.4",
+    "@babel/plugin-transform-classes": "7.10.4",
+    "@babel/plugin-transform-modules-commonjs": "7.10.4",
+    "@babel/plugin-transform-object-assign": "7.10.4",
+    "@babel/plugin-transform-runtime": "7.11.5",
+    "@babel/preset-env": "7.11.5",
+    "@babel/preset-typescript": "7.10.4",
+    "@babel/register": "7.11.5",
+    "@babel/runtime": "7.11.2",
+    "babel-loader": "8.1.0",
+    "babel-plugin-array-includes": "2.0.3",
+    "glob": "7.1.6",
+    "path": "0.12.7",
+    "webpack": "4.44.1",
+    "webpack-cli": "3.3.12"
   },
   "description": "Function to webpack Enonic XP server-side javascript",
   "devDependencies": {
-    "eslint": "^6.7.2",
-    "eslint-config-airbnb-base": "^13.2.0",
-    "eslint-config-prettier": "^6.7.0",
-    "eslint-plugin-import": "^2.19.1",
-    "eslint-plugin-prettier": "^3.1.1",
-    "prettier": "^1.19.1",
-    "terser-webpack-plugin": "^2.2.2"
+    "eslint": "7.8.1",
+    "eslint-config-airbnb-base": "14.2.0",
+    "eslint-config-prettier": "6.11.0",
+    "eslint-plugin-import": "2.22.0",
+    "eslint-plugin-prettier": "3.1.4",
+    "prettier": "2.1.1",
+    "terser-webpack-plugin": "^4.1.0"
   },
   "files": [
     "dist"
@@ -44,10 +43,10 @@
   "license": "ISC",
   "main": "dist/index.js",
   "name": "@enonic/webpack-server-side-js",
-  "repository": "https://github.com/enonic/enonic-npm-modules/packages/webpack-server-side-js",
+  "repository": "https://github.com/enonic/webpack-server-side-js",
   "scripts": {
-    "prepack": "npm run webpack",
+    "prepack": "yarn run webpack",
     "webpack": "webpack"
   },
-  "version": "0.1.5"
+  "version": "0.2.0"
 }
