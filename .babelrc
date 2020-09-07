@@ -6,8 +6,8 @@
 		"@babel/plugin-transform-modules-commonjs",
 		"@babel/plugin-transform-object-assign",
 		["@babel/plugin-transform-runtime", {
-      		"regenerator": true
-    	}]
+	  		"regenerator": true
+		}]
 	],
 	"presets": [
 		[
