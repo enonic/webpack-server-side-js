@@ -45,6 +45,11 @@ Into:
 
 ## Changelog
 
+### 0.4.0
+
+* Only use @babel/preset-env with corejs 3 and useBuiltIns usage
+* Don't use @babel/plugin-transform-runtime
+
 ### 0.3.0
 
 * Trying @babel/preset-env targets esmodules true and @babel/plugin-transform-runtime regenerator: true to avoid "regeneratorRuntime" is not defined

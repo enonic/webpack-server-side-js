@@ -4,16 +4,18 @@
 		"@babel/plugin-proposal-class-properties",
 		"@babel/plugin-proposal-object-rest-spread",
 		"@babel/plugin-transform-modules-commonjs",
-		"@babel/plugin-transform-object-assign",
-		["@babel/plugin-transform-runtime", {
-	  		"regenerator": true
-		}]
+		"@babel/plugin-transform-object-assign"
 	],
 	"presets": [
 		[
 			"@babel/preset-env",
 			{
-				"useBuiltIns": false
+				"forceAllTransforms": false,
+				"corejs": 3,
+				"targets": {
+					"esmodules": true
+				},
+				"useBuiltIns": "usage"
 			}
 		]
 	]

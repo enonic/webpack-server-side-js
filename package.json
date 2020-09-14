@@ -17,6 +17,7 @@
     "@babel/runtime": "7.11.2",
     "babel-loader": "8.1.0",
     "babel-plugin-array-includes": "2.0.3",
+    "core-js": "^3.6.5",
     "glob": "7.1.6",
     "path": "0.12.7",
     "webpack": "4.44.1",
@@ -44,5 +45,5 @@
     "prepack": "yarn run webpack",
     "webpack": "webpack"
   },
-  "version": "0.3.0"
+  "version": "0.4.0"
 }

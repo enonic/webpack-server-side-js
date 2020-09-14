@@ -126,12 +126,6 @@ export function webpackServerSideJs(params) {
 									'@babel/plugin-transform-classes',
 									'@babel/plugin-transform-modules-commonjs',
 									'@babel/plugin-transform-object-assign',
-									[
-										'@babel/plugin-transform-runtime',
-										{
-											regenerator: true
-										}
-									],
 									'array-includes'
 								],
 								presets: [
@@ -139,15 +133,17 @@ export function webpackServerSideJs(params) {
 									[
 										'@babel/preset-env',
 										{
+											corejs: 3,
+
 											// Enables all transformation plugins and as a result,
 											// your code is fully compiled to ES5
 											forceAllTransforms: true,
 
 											targets: {
-												esmodules: true
+												esmodules: false // Enonic XP doesn't support ECMAScript Modules
 											},
 
-											useBuiltIns: false // false means polyfill not required runtime
+											useBuiltIns: 'usage' // false means polyfill not required runtime?
 										}
 									]
 								]

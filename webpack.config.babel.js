@@ -27,21 +27,18 @@ const WEBPACK_CONFIG = {
 					plugins: [
 						'@babel/plugin-proposal-object-rest-spread',
 						'@babel/plugin-transform-object-assign',
-						[
-							'@babel/plugin-transform-runtime',
-							{
-								regenerator: true
-							}
-						],
 						'array-includes'
 					],
 					presets: [
 						[
 							'@babel/preset-env',
 							{
+								corejs: 3,
+								forceAllTransforms: false,
 								targets: {
-									esmodules: true
-								}
+									esmodules: true // Does node support ECMAScript Modules yet?
+								},
+								useBuiltIns: 'usage'
 							}
 						]
 					]
