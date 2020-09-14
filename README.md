@@ -45,6 +45,12 @@ Into:
 
 ## Changelog
 
+### 0.3.0
+
+* Trying @babel/preset-env targets esmodules true and @babel/plugin-transform-runtime regenerator: true to avoid "regeneratorRuntime" is not defined
+* Do not minimize
+* Removed terser-webpack-plugin
+
 ### 0.2.0
 
 * Removed transform-es2017-object-entries because it's for babel 6, not 7

@@ -1,5 +1,5 @@
 import path from 'path';
-import TerserPlugin from 'terser-webpack-plugin';
+//import TerserPlugin from 'terser-webpack-plugin';
 
 const WEBPACK_CONFIG = {
 	context: path.resolve(__dirname, 'src'),
@@ -27,15 +27,31 @@ const WEBPACK_CONFIG = {
 					plugins: [
 						'@babel/plugin-proposal-object-rest-spread',
 						'@babel/plugin-transform-object-assign',
+						[
+							'@babel/plugin-transform-runtime',
+							{
+								regenerator: true
+							}
+						],
 						'array-includes'
 					],
-					presets: ['@babel/preset-env']
+					presets: [
+						[
+							'@babel/preset-env',
+							{
+								targets: {
+									esmodules: true
+								}
+							}
+						]
+					]
 				} // options
 			}]
 		}]
 	},
 	optimization: {
-		minimizer: [
+		minimize: false
+		/*minimizer: [
 			new TerserPlugin({
 				sourceMap: true,
 				terserOptions: {
@@ -46,7 +62,7 @@ const WEBPACK_CONFIG = {
 					keep_fnames: true
 				}
 			})
-		]
+		]*/
 	},
 	output: {
 		path: path.join(__dirname, 'dist'),

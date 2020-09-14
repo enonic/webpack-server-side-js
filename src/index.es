@@ -35,7 +35,9 @@ export function webpackServerSideJs(params) {
 
 		mode = 'production',
 
-		optimization = {},
+		optimization = {
+			minimize: false
+		},
 
 		outputFilename = '[name].js',
 		outputPath = path.join(__dirname, DST_DIR),
@@ -124,6 +126,12 @@ export function webpackServerSideJs(params) {
 									'@babel/plugin-transform-classes',
 									'@babel/plugin-transform-modules-commonjs',
 									'@babel/plugin-transform-object-assign',
+									[
+										'@babel/plugin-transform-runtime',
+										{
+											regenerator: true
+										}
+									],
 									'array-includes'
 								],
 								presets: [
@@ -134,6 +142,11 @@ export function webpackServerSideJs(params) {
 											// Enables all transformation plugins and as a result,
 											// your code is fully compiled to ES5
 											forceAllTransforms: true,
+
+											targets: {
+												esmodules: true
+											},
+
 											useBuiltIns: false // false means polyfill not required runtime
 										}
 									]

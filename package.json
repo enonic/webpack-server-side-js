@@ -25,9 +25,8 @@
   "description": "Function to webpack Enonic XP server-side javascript",
   "devDependencies": {
     "babel-eslint": "10.1.0",
-    "eslint": "7.8.1",
-    "eslint-plugin-import": "2.22.0",
-    "terser-webpack-plugin": "^4.1.0"
+    "eslint": "7.9.0",
+    "eslint-plugin-import": "2.22.0"
   },
   "files": [
     "dist"
@@ -45,5 +44,5 @@
     "prepack": "yarn run webpack",
     "webpack": "webpack"
   },
-  "version": "0.2.0"
+  "version": "0.3.0"
 }
