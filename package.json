@@ -17,9 +17,10 @@
     "@babel/runtime": "7.11.2",
     "babel-loader": "8.1.0",
     "babel-plugin-array-includes": "2.0.3",
-    "core-js": "^3.6.5",
+    "core-js": "3.6.5",
     "glob": "7.1.6",
     "path": "0.12.7",
+    "uglifyjs-webpack-plugin": "^2.2.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12"
   },
