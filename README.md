@@ -45,6 +45,10 @@ Into:
 
 ## Changelog
 
+### 0.5.0
+
+* Try @babel/preset-env target node 0.10.48
+
 ### 0.4.0
 
 * Only use @babel/preset-env with corejs 3 and useBuiltIns usage
