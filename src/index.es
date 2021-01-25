@@ -1,6 +1,7 @@
 import glob from 'glob';
 import path from 'path';
 //import UglifyJsPlugin from 'uglifyjs-webpack-plugin'; // Supports ECMAScript2015
+//import webpack from 'webpack';
 
 const dict = arr => Object.assign(...arr.map(([k, v]) => ({ [k]: v })));
 // const toStr = v => JSON.stringify(v, null, 4);
@@ -60,7 +61,7 @@ export function webpackServerSideJs(params) {
 
 		plugins = [],
 
-		resolveAlias,
+		resolveAlias,// = {},
 		resolveExtensions = [
 			'mjs',
 			'jsx',
@@ -102,6 +103,10 @@ export function webpackServerSideJs(params) {
 		resolve
 	}));*/
 
+	/*if (!resolve.alias.myGlobal) {
+		resolve.alias.myGlobal = path.resolve(__dirname, './global');
+	}*/
+
 	if (!serverSideFiles.length) {
 		console.error('Webpack did not find any files to process!');
 		process.exit();
@@ -117,11 +122,11 @@ export function webpackServerSideJs(params) {
 			rules: [
 				{
 					test: /\.(es6?|tsx?|js)$/, // Will need js for node module depenencies
-					/*exclude: [
+					exclude: [
 						/\bcore-js\b/,
 						/\bwebpack\b/,
 						/\bregenerator-runtime\b/,
-					],*/
+					],
 					use: [
 						{
 							loader: 'babel-loader',
@@ -152,11 +157,12 @@ export function webpackServerSideJs(params) {
 									'array-includes'
 								],
 								presets: [
-									'@babel/preset-typescript',
+									//'@babel/preset-typescript', // Why did I ever add this???
 									[
 										'@babel/preset-env',
 										{
-											corejs: '3.6.5', // Needed when useBuiltIns: usage
+											//corejs: '3.8.3', // gives $ is not a function
+											corejs: 3, // Needed when useBuiltIns: usage
 
 											// Default is false
 											// Outputs the targets/plugins used and the version specified in plugin data version to console.log
@@ -186,10 +192,10 @@ export function webpackServerSideJs(params) {
 											//spec: true,
 
 											targets: {
-												//esmodules: false // Enonic XP doesn't support ECMAScript Modules
+												esmodules: false, // Enonic XP doesn't support ECMAScript Modules
 
 												// https://node.green/
-												node: '0.10.48'
+												node: '0.10.48' // gives $ is not a function
 												//node: '5.12.0'
 
 												// enables all transformation plugins and as a result,
@@ -221,6 +227,11 @@ export function webpackServerSideJs(params) {
 			hints: performanceHints
 		},
 		plugins,
+		/*plugins: [
+			new webpack.ProvidePlugin({
+				global: 'myGlobal'
+			})
+		].concat(plugins),*/
 		resolve,
 		stats
 	};
