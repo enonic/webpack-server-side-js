@@ -45,6 +45,10 @@ Into:
 
 ## Changelog
 
+### 0.6.0
+
+* Node 14.15.4
+
 ### 0.5.0
 
 * Try @babel/preset-env target node 0.10.48
