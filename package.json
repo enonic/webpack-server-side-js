@@ -20,7 +20,7 @@
     "core-js": "3.6.5",
     "glob": "7.1.6",
     "path": "0.12.7",
-    "uglifyjs-webpack-plugin": "^2.2.0",
+    "uglifyjs-webpack-plugin": "2.2.0",
     "webpack": "4.44.1",
     "webpack-cli": "3.3.12"
   },
@@ -28,7 +28,7 @@
   "devDependencies": {
     "babel-eslint": "10.1.0",
     "eslint": "7.9.0",
-    "eslint-plugin-import": "2.22.0"
+    "eslint-plugin-import": "2.22.1"
   },
   "files": [
     "dist"

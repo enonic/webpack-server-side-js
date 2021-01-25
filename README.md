@@ -48,6 +48,7 @@ Into:
 ### 0.6.0
 
 * Node 14.15.4
+* Upgrade node modules (patch)
 
 ### 0.5.0
 
