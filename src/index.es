@@ -81,7 +81,7 @@ export function webpackServerSideJs(params) {
 		stats = {
 			colors: true,
 			hash: false,
-			maxModules: 0,
+			//maxModules: 0, // Removed in webpack 5
 			modules: false,
 			moduleTrace: false,
 			timings: false,

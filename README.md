@@ -45,6 +45,10 @@ Into:
 
 ## Changelog
 
+### 0.9.0
+
+* maxModules removed in webpack 5
+
 ### 0.8.0
 
 * Got webpack 5 to work in some projects
