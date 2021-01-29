@@ -45,6 +45,10 @@ Into:
 
 ## Changelog
 
+### 0.8.0
+
+* Got webpack 5 to work in some projects
+
 ### 0.7.0
 
 * Exclude core-js, regenerator-runtime and webpack from transpiling

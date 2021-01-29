@@ -139,6 +139,7 @@ export function webpackServerSideJs(params) {
 									'@babel/plugin-proposal-class-properties',
 									'@babel/plugin-proposal-export-default-from',
 									'@babel/plugin-proposal-object-rest-spread',
+									'@babel/plugin-syntax-dynamic-import',
 									'@babel/plugin-syntax-throw-expressions',
 									'@babel/plugin-transform-classes',
 									'@babel/plugin-transform-modules-commonjs',
@@ -195,7 +196,7 @@ export function webpackServerSideJs(params) {
 												esmodules: false, // Enonic XP doesn't support ECMAScript Modules
 
 												// https://node.green/
-												node: '0.10.48' // gives $ is not a function
+												node: '0.10.48'
 												//node: '5.12.0'
 
 												// enables all transformation plugins and as a result,
