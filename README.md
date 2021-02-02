@@ -45,6 +45,11 @@ Into:
 
 ## Changelog
 
+### 0.10.0
+
+* eslint 5.19.0
+* webpack 7.19.0
+
 ### 0.9.0
 
 * maxModules removed in webpack 5
